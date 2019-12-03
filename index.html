@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--[if IE 8]> 				 <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+	<meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Random Name Picker</title>
+
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="css/foundation.css" />
+  <script src="js/vendor/custom.modernizr.js"></script>
+  <script src="js/jquery-latest.min.js"></script>
+
+<style>
+#values { position:relative;font-size:400%;text-align:center;margin: 0 auto;z-index:0; }
+.name { overflow:hidden;display:block; }
+#names { display:none;padding:5px; }
+#namesbox { min-height:400px;font-size:32px;color:#333;resize:none;border:1px solid #F39C12; }
+.extra { font-size:16px;margin-top:20px; }
+#result1 { background:#000;color:#fbe34b;padding:20px;z-index:10;margin-top:-150px; }
+body { background:#000 url(img/bg-noise-orange.png); }
+#varnote { font-size:40px;text-align:center;padding:30px; }
+.copyright { font-size:11px;font-family:Tahoma;color:#9B59B6; }
+</style>
+
+</head>
+<body onload="reset();">
+
+  <div class="full-head" style="width:100%;background:#111 url(img/header-bg.png) repeat-x center top;border-bottom:1px solid #D35400;">
+	<div class="row">
+		<div class="large-12 columns" style="padding-top:50px;background:#111 url(img/header-bg.png) repeat-x center top;z-index:20;">
+		<ul class="button-group even-4">
+      <li><a href="index.html" class="alert button" id="reset">Reset</a></li>
+			<li><button class="button" id="list" onclick="namelist();">Name List</button></li>
+			<li><button class="button" id="save" onclick="save();">Save &amp; Update</button></li>
+			<li><button class="success button" id="go" onclick="go();">GO!</button></li>
+    </ul>
+		</div>
+	</div>
+	</div>
+
+	<div class="row">
+		<div class="large-12 columns">
+			<h3 style="text-align:center;margin-top:30px;" id="headline">Let's see who is The Lucky One?</h3>
+			
+		<!--
+      <div class="copyright">&copy; Coded by <strong>Heiswayi Nrird</strong>, June 2013</div>
+    -->	<div id="varnote"><img src="img/logo.png"></div>
+			
+      <div id="popdown">
+      <div id="names" class="inbox"><textarea name="namesbox" id="namesbox"></textarea></div>
+      </div>
+      
+      <div id="values"></div>
+
+
+		</div>
+  </div>
+  <script>
+    document.write('<script src=' +
+    ('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') +
+    '.js><\/script>')
+    </script>
+    
+    <script src="js/foundation.min.js"></script>
+    <script>$(document).foundation();</script>
+    
+  </script>
+  <script src="js/picker.js"></script>
+</body>
+</html>
